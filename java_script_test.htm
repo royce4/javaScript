@@ -1,0 +1,81 @@
+<html>
+
+    <head>
+        
+        <title>Javascript Stuff</title>
+        <script type="text/javascript">
+
+        </script>    
+        <style type="text/css">
+           #circle1
+           {
+               width:60px;
+               height:60px;
+               border-radius:30px;
+               background:red;
+               float:left;
+               margin: 0;
+               padding: 0;
+               color: #353535;
+           }
+    
+           #circle2
+           { width:60px;
+               height:60px;
+               border-radius:30px;
+               float:left;
+               color: #353535;
+               background: green;
+           }
+           
+           #circle3
+           {   width:60px;
+               height:60px;
+               border-radius:30px;
+               float:left;
+               color: #353535;
+               background:yellow;
+           }
+           </style>
+    </head>
+
+    <body>
+    <p>I am holding up this many fingers:</p>    
+    <select id="texty">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+    </select>
+    <button id="guess">Computer Guess?</button>
+
+      
+        <script type="text/javascript">
+            
+            
+            document.getElementById("guess").onclick = function(){
+                var numberFingers = document.getElementById("texty").value;
+                var numGuess = 1;
+                var randomNumber = Math.random();
+                randomNumber = randomNumber * 6;
+                randomNumber = Math.floor(randomNumber);
+                var gotIt= false;    
+                while (gotIt == false){
+                    if (randomNumber == numberFingers){
+                        alert("computer is correct. It took the computer this many guesses " + numGuess);
+                        gotIt = true;
+        
+                    } 
+                    else  {
+                        alert("Computer is incorrect on guess " + numGuess);
+                        numGuess ++;
+                        randomNumber = Math.floor(Math.random()*6);
+                    }
+                }
+            }
+        </script>
+        
+    </body>
+
+</html>
