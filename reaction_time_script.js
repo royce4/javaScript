@@ -38,7 +38,11 @@
 
             }
 //Future dev- went quit button pushed game ends. 
-            function EndGame(){
+            function endGame(){
+
+            }
+//Future dev- calculated statitics- average, best, worst. 
+            function displayStats(){
 
             }
 
