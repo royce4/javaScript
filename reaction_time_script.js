@@ -2,7 +2,7 @@
             var shapes = ["0%","50%"];
             appearAfterDelay();
 
-//Create a random hex number for color styling
+//Return a random hex number for color styling
             function createHex(){
                 var hexString = "#";
                 var number, hex;
@@ -15,7 +15,7 @@
                 return(hexString);
 
             }
-// Make somewhat random shape appear, either square or circle. With stylization of size, color and location randomized
+// Make somewhat random shape appear, either square or circle. With random stylization of size, color and location
 // Start timer after creation 
             function makeShapeAppear(){
                 var top = Math.random()*400;
@@ -37,6 +37,11 @@
                 setTimeout(makeShapeAppear(), (Math.random()*2000));
 
             }
+//Future dev- went quit button pushed game ends. 
+            function EndGame(){
+
+            }
+
 // Main function. Once the shape is clicked it disappears and reaction time is calculated and displayed.
 
             document.getElementById("shape").onclick = function(){
